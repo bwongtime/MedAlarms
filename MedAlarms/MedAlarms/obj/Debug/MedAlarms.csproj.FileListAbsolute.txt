@@ -1,0 +1,7 @@
+C:\Users\Imidazole.IMZEUS\Documents\GitHub\MedAlarms\MedAlarms\MedAlarms\bin\MedAlarms.dll
+C:\Users\Imidazole.IMZEUS\Documents\GitHub\MedAlarms\MedAlarms\MedAlarms\bin\MedAlarms.pdb
+C:\Users\Imidazole.IMZEUS\Documents\GitHub\MedAlarms\MedAlarms\MedAlarms\bin\EntityFramework.dll
+C:\Users\Imidazole.IMZEUS\Documents\GitHub\MedAlarms\MedAlarms\MedAlarms\bin\EntityFramework.xml
+C:\Users\Imidazole.IMZEUS\Documents\GitHub\MedAlarms\MedAlarms\MedAlarms\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Imidazole.IMZEUS\Documents\GitHub\MedAlarms\MedAlarms\MedAlarms\obj\Debug\MedAlarms.dll
+C:\Users\Imidazole.IMZEUS\Documents\GitHub\MedAlarms\MedAlarms\MedAlarms\obj\Debug\MedAlarms.pdb
