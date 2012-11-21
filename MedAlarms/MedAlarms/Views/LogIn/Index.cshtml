@@ -1,0 +1,26 @@
+﻿@* This is the login controller that controls the login view *@
+
+@model MedAlarms.Controllers.LoginModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>
+    Log In page
+</h2>
+@* These scripts allow for there to be both client side and user side validation on the login page *@
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@*this is the form that users will have to submit to login*@
+@using (Html.BeginForm())
+{
+    @* this creates the textboxes on the login page*@
+    @Html.LabelFor(m => m.Email)
+    @Html.TextBoxFor(m => m.Email) <br />
+    @Html.LabelFor(m => m.Password)
+    @Html.PasswordFor(m => m.Password)
+    <input input type="submit" />
+    @Html.ValidationSummary()
+}

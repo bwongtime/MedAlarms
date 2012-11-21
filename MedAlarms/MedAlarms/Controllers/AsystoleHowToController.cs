@@ -1,4 +1,4 @@
-﻿//this is the controller for the Homepage
+﻿//this controller controls the asystolewalkthrough page
 
 using System;
 using System.Collections.Generic;
@@ -8,10 +8,10 @@ using System.Web.Mvc;
 
 namespace MedAlarms.Controllers
 {
-    public class HomeController : Controller
+    public class AsystoleHowToController : Controller
     {
         //
-        // GET: /Home/
+        // GET: /AsystoleWalkthrough/
 
         public ActionResult Index()
         {

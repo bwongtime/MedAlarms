@@ -24,6 +24,7 @@ namespace MedAlarms
             routes.MapRoute(
                 "Default", // Route name
                 "{controller}/{action}/{id}", // URL with parameters
+                //when one accesses the homepage, they are sent to the home controller, which would then call the action "index"
                 new { controller = "Home", action = "Index", id = UrlParameter.Optional } // Parameter defaults
             );
 
