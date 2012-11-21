@@ -1,9 +1,9 @@
 ﻿Namespace Medical_Alarm_Project
-    Public Class HomePageController
+    Public Class homeController
         Inherits System.Web.Mvc.Controller
 
         '
-        ' GET: /HomePage
+        ' GET: /home
 
         Function Index() As ActionResult
             Return View()
