@@ -62,11 +62,13 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\AsystoleAnnotatingController.cs" />
+    <Compile Include="Controllers\AsystoleGraphsController.cs" />
     <Compile Include="Controllers\AsystoleHowToController.cs" />
     <Compile Include="Controllers\ChooseAlarmTypeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LogInController.cs" />
+    <Compile Include="Controllers\LogOutController.cs" />
+    <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -145,13 +147,22 @@
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\AsystoleWalkthrough\Index.cshtml" />
+    <Content Include="Views\AsystoleGraphs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\ChooseAnotationType\Index.cshtml" />
+    <Content Include="Views\ChooseAlarmType\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\AsystoleAnnotating\Index.cshtml" />
+    <Content Include="Views\AsystoleHowTo\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\LogOut\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_AnonLayout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Profile\Index.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

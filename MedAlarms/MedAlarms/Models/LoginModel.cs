@@ -13,6 +13,7 @@ namespace MedAlarms.Controllers
         [Required] //the email is required to login
         public string Email { get; set; }
 
+        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 5)]
         [Required] //the password is required to login
         public string Password { get; set; }
     }

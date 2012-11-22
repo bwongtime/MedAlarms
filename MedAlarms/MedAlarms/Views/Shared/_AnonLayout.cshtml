@@ -1,6 +1,5 @@
 ﻿
-
-@* this is the main layout for pages that you can only access when you are authenticated *@
+@* this is the main layout for pages that you can access if you are not authenticated *@
 
 <!DOCTYPE html>
 <html>
@@ -13,16 +12,6 @@
 </head>
 
 <body>
-<div>
-<a href="/home">Home</a> |
-<a href="/profile">Profile</a> |
-<a href="/ChooseAlarmType">Choose an Alarm</a> |
-<a href="/AsystoleHowTo">Walkthroughs</a> |
-<a href="/AsystoleGraphs">Graphs to Annotate</a> |
-<a href="/logout">Logout</a> |
-
-
-</div>
 
 <div>
     @RenderBody()

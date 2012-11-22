@@ -26,7 +26,7 @@ namespace MedAlarms.Controllers
             {
                 if (model.Email == "Brandon" && model.Password == "fall2012") //Simulate data store where Username/Password exists in database
                 {
-                    FormsAuthentication.SetAuthCookie(model.Email, true); //sets cookie so that user can log on after closing browser
+                    FormsAuthentication.SetAuthCookie(model.Email, false); //sets cookie so that user can log on after closing browser to false
                     return RedirectToAction("index", "home");//redirects user to index page of home controller if log in is correct
                 }
                 {
