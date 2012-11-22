@@ -69,10 +69,24 @@
     <Compile Include="Controllers\LogInController.cs" />
     <Compile Include="Controllers\LogOutController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
+    <Compile Include="DataAccess\UserAccess.cs" />
+    <Compile Include="Models\alarm_info.cs" />
+    <Compile Include="Models\binary_file.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Mapping\alarm_infoMap.cs" />
+    <Compile Include="Models\Mapping\binary_fileMap.cs" />
+    <Compile Include="Models\Mapping\scoreMap.cs" />
+    <Compile Include="Models\Mapping\sysdiagramMap.cs" />
+    <Compile Include="Models\Mapping\user_annotationMap.cs" />
+    <Compile Include="Models\Mapping\user_infoMap.cs" />
+    <Compile Include="Models\score.cs" />
+    <Compile Include="Models\sysdiagram.cs" />
+    <Compile Include="Models\user_annotation.cs" />
+    <Compile Include="Models\user_info.cs" />
+    <Compile Include="Models\xiao198_capstone2012Context.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -164,9 +178,7 @@
   <ItemGroup>
     <Content Include="Views\Profile\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
