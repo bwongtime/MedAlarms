@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MedAlarms.Controllers.AsystoleGraphsController" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\AsystoleGraphsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MedAlarms.Controllers.AsystoleHowToController" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\AsystoleHowToController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MedAlarms.Controllers.ChooseAlarmTypeController" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\ChooseAlarmTypeController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MedAlarms.Controllers.HomeController" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\HomeController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MedAlarms.Controllers.LogInController" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\LogInController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MedAlarms.Controllers.LogOutController" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\LogOutController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MedAlarms.Controllers.ProfileController" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\ProfileController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MedAlarms.Controllers.LoginModel" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Models\LoginModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MedAlarms.DataAccess.UserAccess" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataAccess\UserAccess.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MedAlarms.MvcApplication" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAIQAAAAAAAAAA=</HashCode>
+      <FileName>Global.asax.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MedAlarms.Models.alarm_info" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAECAABAAAQgAAEAAIAAAQEAAhAAAAAAAIAAIA=</HashCode>
+      <FileName>Models\alarm_info.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MedAlarms.Models.binary_file" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAQAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Models\binary_file.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MedAlarms.Models.score" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAAAIAAAAAAQAAAAAAAAAAgAA=</HashCode>
+      <FileName>Models\score.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MedAlarms.Models.sysdiagram" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAIAAAAAAAAAAAAAAAQAAAFAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\sysdiagram.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MedAlarms.Models.user_annotation" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAgAAAAEAAAAAAAQAYAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Models\user_annotation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MedAlarms.Models.user_info" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAgAAESQBAAAAAAgAAAgE=</HashCode>
+      <FileName>Models\user_info.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MedAlarms.Models.xiao198_capstone2012Context" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAAAAAIAAAAEAQAAABAAAAAEAAAgAA=</HashCode>
+      <FileName>Models\xiao198_capstone2012Context.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MedAlarms.Models.Mapping.alarm_infoMap" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Mapping\alarm_infoMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MedAlarms.Models.Mapping.binary_fileMap" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Mapping\binary_fileMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MedAlarms.Models.Mapping.scoreMap" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Mapping\scoreMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MedAlarms.Models.Mapping.sysdiagramMap" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Mapping\sysdiagramMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MedAlarms.Models.Mapping.user_annotationMap" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Mapping\user_annotationMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MedAlarms.Models.Mapping.user_infoMap" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Mapping\user_infoMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
