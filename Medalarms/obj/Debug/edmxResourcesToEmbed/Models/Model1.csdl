@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="xiao198_capstone2012Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="xiao198_capstone2012Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="alarm_info" EntityType="xiao198_capstone2012Model.alarm_info" />
+    <EntitySet Name="binary_file" EntityType="xiao198_capstone2012Model.binary_file" />
+    <EntitySet Name="scores" EntityType="xiao198_capstone2012Model.score" />
+    <EntitySet Name="sysdiagrams" EntityType="xiao198_capstone2012Model.sysdiagram" />
+    <EntitySet Name="user_annotation" EntityType="xiao198_capstone2012Model.user_annotation" />
+    <EntitySet Name="user_info" EntityType="xiao198_capstone2012Model.user_info" />
+    <AssociationSet Name="FK__alarm_inf__binar__0DAF0CB0" Association="xiao198_capstone2012Model.FK__alarm_inf__binar__0DAF0CB0">
+      <End Role="binary_file" EntitySet="binary_file" />
+      <End Role="alarm_info" EntitySet="alarm_info" />
+    </AssociationSet>
+    <AssociationSet Name="FK__user_anno__alarm__117F9D94" Association="xiao198_capstone2012Model.FK__user_anno__alarm__117F9D94">
+      <End Role="alarm_info" EntitySet="alarm_info" />
+      <End Role="user_annotation" EntitySet="user_annotation" />
+    </AssociationSet>
+    <AssociationSet Name="FK__user_anno__user___108B795B" Association="xiao198_capstone2012Model.FK__user_anno__user___108B795B">
+      <End Role="user_info" EntitySet="user_info" />
+      <End Role="user_annotation" EntitySet="user_annotation" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="alarm_info">
+    <Key>
+      <PropertyRef Name="alarm_id" />
+    </Key>
+    <Property Name="alarm_id" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="binary_file_id" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="alarm_startime" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="alarm_level" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="alarm_parcode" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="alarm_name" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="alarm_message" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="alarm_duration" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="user_names" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="is_predetermined" Type="Int32" />
+    <Property Name="predetermined_result" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="binary_file" Relationship="xiao198_capstone2012Model.FK__alarm_inf__binar__0DAF0CB0" FromRole="alarm_info" ToRole="binary_file" />
+    <NavigationProperty Name="user_annotation" Relationship="xiao198_capstone2012Model.FK__user_anno__alarm__117F9D94" FromRole="alarm_info" ToRole="user_annotation" />
+  </EntityType>
+  <EntityType Name="binary_file">
+    <Key>
+      <PropertyRef Name="binary_file_id" />
+    </Key>
+    <Property Name="binary_file_id" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="binary_file_address" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="binary_file_startime" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="alarm_info" Relationship="xiao198_capstone2012Model.FK__alarm_inf__binar__0DAF0CB0" FromRole="binary_file" ToRole="alarm_info" />
+  </EntityType>
+  <EntityType Name="score">
+    <Key>
+      <PropertyRef Name="alarm_id" />
+    </Key>
+    <Property Name="alarm_id" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="num_annotations" Type="Int32" />
+    <Property Name="annotation_ids" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="ground_truth" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="user_annotation">
+    <Key>
+      <PropertyRef Name="annotation_id" />
+    </Key>
+    <Property Name="annotation_id" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="user_id" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="alarm_id" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="annotation_result" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="annotation_time" Type="DateTime" />
+    <NavigationProperty Name="alarm_info" Relationship="xiao198_capstone2012Model.FK__user_anno__alarm__117F9D94" FromRole="user_annotation" ToRole="alarm_info" />
+    <NavigationProperty Name="user_info" Relationship="xiao198_capstone2012Model.FK__user_anno__user___108B795B" FromRole="user_annotation" ToRole="user_info" />
+  </EntityType>
+  <EntityType Name="user_info">
+    <Key>
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="user_id" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="user_name" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="user_password" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="num_annotation" Type="Int32" />
+    <Property Name="last_annotation_time" Type="DateTime" />
+    <Property Name="user_email" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="user_annotation_level" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="user_firstname" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="user_lastname" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="user_annotation" Relationship="xiao198_capstone2012Model.FK__user_anno__user___108B795B" FromRole="user_info" ToRole="user_annotation" />
+  </EntityType>
+  <Association Name="FK__alarm_inf__binar__0DAF0CB0">
+    <End Role="binary_file" Type="xiao198_capstone2012Model.binary_file" Multiplicity="1" />
+    <End Role="alarm_info" Type="xiao198_capstone2012Model.alarm_info" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="binary_file">
+        <PropertyRef Name="binary_file_id" />
+      </Principal>
+      <Dependent Role="alarm_info">
+        <PropertyRef Name="binary_file_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__user_anno__alarm__117F9D94">
+    <End Role="alarm_info" Type="xiao198_capstone2012Model.alarm_info" Multiplicity="1" />
+    <End Role="user_annotation" Type="xiao198_capstone2012Model.user_annotation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="alarm_info">
+        <PropertyRef Name="alarm_id" />
+      </Principal>
+      <Dependent Role="user_annotation">
+        <PropertyRef Name="alarm_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__user_anno__user___108B795B">
+    <End Role="user_info" Type="xiao198_capstone2012Model.user_info" Multiplicity="1" />
+    <End Role="user_annotation" Type="xiao198_capstone2012Model.user_annotation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user_info">
+        <PropertyRef Name="user_id" />
+      </Principal>
+      <Dependent Role="user_annotation">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

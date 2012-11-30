@@ -1,0 +1,2 @@
+C:\Users\Imidazole.IMZEUS\Documents\GitHub\MedAlarms\Medalarms\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Imidazole.IMZEUS\Documents\GitHub\MedAlarms\Medalarms\obj\Debug\MvcApplication2.dll

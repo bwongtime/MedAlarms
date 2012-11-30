@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="xiao198_capstone2012ModelStoreContainer" CdmEntityContainer="xiao198_capstone2012Entities">
+    <EntitySetMapping Name="alarm_info">
+      <EntityTypeMapping TypeName="xiao198_capstone2012Model.alarm_info">
+        <MappingFragment StoreEntitySet="alarm_info">
+          <ScalarProperty Name="alarm_id" ColumnName="alarm_id" />
+          <ScalarProperty Name="binary_file_id" ColumnName="binary_file_id" />
+          <ScalarProperty Name="alarm_startime" ColumnName="alarm_startime" />
+          <ScalarProperty Name="alarm_level" ColumnName="alarm_level" />
+          <ScalarProperty Name="alarm_parcode" ColumnName="alarm_parcode" />
+          <ScalarProperty Name="alarm_name" ColumnName="alarm_name" />
+          <ScalarProperty Name="alarm_message" ColumnName="alarm_message" />
+          <ScalarProperty Name="alarm_duration" ColumnName="alarm_duration" />
+          <ScalarProperty Name="user_names" ColumnName="user_names" />
+          <ScalarProperty Name="is_predetermined" ColumnName="is_predetermined" />
+          <ScalarProperty Name="predetermined_result" ColumnName="predetermined_result" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="binary_file">
+      <EntityTypeMapping TypeName="xiao198_capstone2012Model.binary_file">
+        <MappingFragment StoreEntitySet="binary_file">
+          <ScalarProperty Name="binary_file_id" ColumnName="binary_file_id" />
+          <ScalarProperty Name="binary_file_address" ColumnName="binary_file_address" />
+          <ScalarProperty Name="binary_file_startime" ColumnName="binary_file_startime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="scores">
+      <EntityTypeMapping TypeName="xiao198_capstone2012Model.score">
+        <MappingFragment StoreEntitySet="score">
+          <ScalarProperty Name="alarm_id" ColumnName="alarm_id" />
+          <ScalarProperty Name="num_annotations" ColumnName="num_annotations" />
+          <ScalarProperty Name="annotation_ids" ColumnName="annotation_ids" />
+          <ScalarProperty Name="ground_truth" ColumnName="ground_truth" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="xiao198_capstone2012Model.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user_annotation">
+      <EntityTypeMapping TypeName="xiao198_capstone2012Model.user_annotation">
+        <MappingFragment StoreEntitySet="user_annotation">
+          <ScalarProperty Name="annotation_id" ColumnName="annotation_id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="alarm_id" ColumnName="alarm_id" />
+          <ScalarProperty Name="annotation_result" ColumnName="annotation_result" />
+          <ScalarProperty Name="annotation_time" ColumnName="annotation_time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user_info">
+      <EntityTypeMapping TypeName="xiao198_capstone2012Model.user_info">
+        <MappingFragment StoreEntitySet="user_info">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="user_name" ColumnName="user_name" />
+          <ScalarProperty Name="user_password" ColumnName="user_password" />
+          <ScalarProperty Name="num_annotation" ColumnName="num_annotation" />
+          <ScalarProperty Name="last_annotation_time" ColumnName="last_annotation_time" />
+          <ScalarProperty Name="user_email" ColumnName="user_email" />
+          <ScalarProperty Name="user_annotation_level" ColumnName="user_annotation_level" />
+          <ScalarProperty Name="user_firstname" ColumnName="user_firstname" />
+          <ScalarProperty Name="user_lastname" ColumnName="user_lastname" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

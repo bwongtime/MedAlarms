@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="xiao198_capstone2012Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="xiao198_capstone2012ModelStoreContainer">
+    <EntitySet Name="alarm_info" EntityType="xiao198_capstone2012Model.Store.alarm_info" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="binary_file" EntityType="xiao198_capstone2012Model.Store.binary_file" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="score" EntityType="xiao198_capstone2012Model.Store.score" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="sysdiagrams" EntityType="xiao198_capstone2012Model.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="user_annotation" EntityType="xiao198_capstone2012Model.Store.user_annotation" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="user_info" EntityType="xiao198_capstone2012Model.Store.user_info" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK__alarm_inf__binar__0DAF0CB0" Association="xiao198_capstone2012Model.Store.FK__alarm_inf__binar__0DAF0CB0">
+      <End Role="binary_file" EntitySet="binary_file" />
+      <End Role="alarm_info" EntitySet="alarm_info" />
+    </AssociationSet>
+    <AssociationSet Name="FK__user_anno__alarm__117F9D94" Association="xiao198_capstone2012Model.Store.FK__user_anno__alarm__117F9D94">
+      <End Role="alarm_info" EntitySet="alarm_info" />
+      <End Role="user_annotation" EntitySet="user_annotation" />
+    </AssociationSet>
+    <AssociationSet Name="FK__user_anno__user___108B795B" Association="xiao198_capstone2012Model.Store.FK__user_anno__user___108B795B">
+      <End Role="user_info" EntitySet="user_info" />
+      <End Role="user_annotation" EntitySet="user_annotation" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="alarm_info">
+    <Key>
+      <PropertyRef Name="alarm_id" />
+    </Key>
+    <Property Name="alarm_id" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="binary_file_id" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="alarm_startime" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="alarm_level" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="alarm_parcode" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="alarm_name" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="alarm_message" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="alarm_duration" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="user_names" Type="varchar" MaxLength="255" />
+    <Property Name="is_predetermined" Type="int" />
+    <Property Name="predetermined_result" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="binary_file">
+    <Key>
+      <PropertyRef Name="binary_file_id" />
+    </Key>
+    <Property Name="binary_file_id" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="binary_file_address" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="binary_file_startime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="score">
+    <Key>
+      <PropertyRef Name="alarm_id" />
+    </Key>
+    <Property Name="alarm_id" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="num_annotations" Type="int" />
+    <Property Name="annotation_ids" Type="varchar" MaxLength="255" />
+    <Property Name="ground_truth" Type="varchar" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="user_annotation">
+    <Key>
+      <PropertyRef Name="annotation_id" />
+    </Key>
+    <Property Name="annotation_id" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="user_id" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="alarm_id" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="annotation_result" Type="varchar" MaxLength="255" />
+    <Property Name="annotation_time" Type="datetime" />
+  </EntityType>
+  <EntityType Name="user_info">
+    <Key>
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="user_id" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="user_name" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="user_password" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="num_annotation" Type="int" />
+    <Property Name="last_annotation_time" Type="datetime" />
+    <Property Name="user_email" Type="varchar" MaxLength="255" />
+    <Property Name="user_annotation_level" Type="varchar" MaxLength="255" />
+    <Property Name="user_firstname" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="user_lastname" Type="varchar" Nullable="false" MaxLength="255" />
+  </EntityType>
+  <Association Name="FK__alarm_inf__binar__0DAF0CB0">
+    <End Role="binary_file" Type="xiao198_capstone2012Model.Store.binary_file" Multiplicity="1" />
+    <End Role="alarm_info" Type="xiao198_capstone2012Model.Store.alarm_info" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="binary_file">
+        <PropertyRef Name="binary_file_id" />
+      </Principal>
+      <Dependent Role="alarm_info">
+        <PropertyRef Name="binary_file_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__user_anno__alarm__117F9D94">
+    <End Role="alarm_info" Type="xiao198_capstone2012Model.Store.alarm_info" Multiplicity="1" />
+    <End Role="user_annotation" Type="xiao198_capstone2012Model.Store.user_annotation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="alarm_info">
+        <PropertyRef Name="alarm_id" />
+      </Principal>
+      <Dependent Role="user_annotation">
+        <PropertyRef Name="alarm_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__user_anno__user___108B795B">
+    <End Role="user_info" Type="xiao198_capstone2012Model.Store.user_info" Multiplicity="1" />
+    <End Role="user_annotation" Type="xiao198_capstone2012Model.Store.user_annotation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user_info">
+        <PropertyRef Name="user_id" />
+      </Principal>
+      <Dependent Role="user_annotation">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+</Schema>
