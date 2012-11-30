@@ -1,0 +1,16 @@
+c:\users\nancy\documents\visual studio 2010\Projects\MvcApplication2\MvcApplication2\bin\MvcApplication2.dll
+c:\users\nancy\documents\visual studio 2010\Projects\MvcApplication2\MvcApplication2\bin\MvcApplication2.pdb
+c:\users\nancy\documents\visual studio 2010\Projects\MvcApplication2\MvcApplication2\bin\EntityFramework.dll
+c:\users\nancy\documents\visual studio 2010\Projects\MvcApplication2\MvcApplication2\bin\EntityFramework.xml
+c:\users\nancy\documents\visual studio 2010\Projects\MvcApplication2\MvcApplication2\obj\Debug\ResolveAssemblyReference.cache
+c:\users\nancy\documents\visual studio 2010\Projects\MvcApplication2\MvcApplication2\obj\Debug\MvcApplication2.dll
+c:\users\nancy\documents\visual studio 2010\Projects\MvcApplication2\MvcApplication2\obj\Debug\MvcApplication2.pdb
+C:\Users\Alegria\Dropbox\AlegriaNancyElissa\MvcApplication2\MvcApplication2\bin\MvcApplication2.dll
+C:\Users\Alegria\Dropbox\AlegriaNancyElissa\MvcApplication2\MvcApplication2\bin\MvcApplication2.pdb
+C:\Users\Alegria\Dropbox\AlegriaNancyElissa\MvcApplication2\MvcApplication2\bin\EntityFramework.dll
+C:\Users\Alegria\Dropbox\AlegriaNancyElissa\MvcApplication2\MvcApplication2\bin\EntityFramework.xml
+C:\Users\Alegria\Dropbox\AlegriaNancyElissa\MvcApplication2\MvcApplication2\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Alegria\Dropbox\AlegriaNancyElissa\MvcApplication2\MvcApplication2\obj\Debug\MvcApplication2.dll
+C:\Users\Alegria\Dropbox\AlegriaNancyElissa\MvcApplication2\MvcApplication2\obj\Debug\MvcApplication2.pdb
+C:\Users\Imidazole.IMZEUS\Documents\Capstone Project\project\MvcApplication2\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Imidazole.IMZEUS\Documents\Capstone Project\project\MvcApplication2\obj\Debug\MvcApplication2.dll
